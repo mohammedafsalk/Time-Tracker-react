@@ -66,77 +66,117 @@ body {
   padding: 10px;
 }
 
-.profiletitle{
-  p{
+.profiletitle {
+  p {
     font-size: 15px;
   }
-  h2{
+  h2 {
     font-size: 28px;
   }
 }
 
-.intervallist{
+.intervallist {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .intervalitem{
+  .intervalitem {
     cursor: pointer;
   }
-  .active{
+  .active {
     color: white;
   }
 }
 
-.card{
+.card {
   border-radius: 15px;
   padding-top: 40px;
 }
 
-.content{
+.content {
   background: $darkBlue;
   border-radius: 10px;
   padding: 30px 25px;
 }
 
-.work{
+.work {
   background-color: $work;
   background-image: url("/images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
-.play{
+.play {
   background-color: $play;
   background-image: url("/images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
 .study {
-  background-color:$study;
+  background-color: $study;
   background-image: url("/images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
-.exercise{
+.exercise {
   background-color: $exercise;
   background-image: url("/images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
 .social {
   background-color: $social;
   background-image: url("/images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
-.self-care{
+.self-care {
   background-color: $self-care;
   background-image: url("/images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
 }
 
-.activity{
+.activity {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  h2{
+  h2 {
     font-size: 18px;
     font-weight: 400;
     color: white;
   }
 }
 
-.info{
+.info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 760px) {
+  .app {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .info{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile{
+    grid-row: 1 / 3;  
+  }
+  .profileinfo {
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
+  .intervallist{
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .avatar{
+    width: 78px;
+  }
+  
 }
