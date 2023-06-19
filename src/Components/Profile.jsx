@@ -1,7 +1,8 @@
 import React from "react";
 
-const Profile = () => {
-  let intervals = ["Daily", "Weekily", "Monthly"];
+const Profile = ({ time, setTime }) => {
+  console.log(time);
+  let intervals = ["Daily", "Weekly", "Monthly"];
   return (
     <div className="profile">
       <div className="profileinfo">
@@ -13,7 +14,15 @@ const Profile = () => {
       </div>
       <div className="intervallist">
         {intervals.map((item, index) => (
-          <div key={index} className="intervalitems">{item}</div>
+          <div
+            key={index}
+            onClick={() => setTime(item.toLowerCase())}
+            className={`intervalitem ${
+              time === item.toLowerCase() ? "active" : ""
+            }`}
+          >
+            {item}
+          </div>
         ))}
       </div>
     </div>

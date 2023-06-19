@@ -36,6 +36,8 @@ body {
 .app {
   max-width: 1150px;
   padding: 30px 20px;
+  display: grid;
+  gap: 20px;
 }
 
 .profile {
@@ -77,4 +79,64 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 15px;
+  .intervalitem{
+    cursor: pointer;
+  }
+  .active{
+    color: white;
+  }
+}
+
+.card{
+  border-radius: 15px;
+  padding-top: 40px;
+}
+
+.content{
+  background: $darkBlue;
+  border-radius: 10px;
+  padding: 30px 25px;
+}
+
+.work{
+  background-color: $work;
+  background-image: url("/images/icon-work.svg");
+}
+.play{
+  background-color: $play;
+  background-image: url("/images/icon-play.svg");
+}
+.study {
+  background-color:$study;
+  background-image: url("/images/icon-study.svg");
+}
+.exercise{
+  background-color: $exercise;
+  background-image: url("/images/icon-exercise.svg");
+}
+.social {
+  background-color: $social;
+  background-image: url("/images/icon-social.svg");
+}
+.self-care{
+  background-color: $self-care;
+  background-image: url("/images/icon-self-care.svg");
+}
+
+.activity{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+  }
+}
+
+.info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
